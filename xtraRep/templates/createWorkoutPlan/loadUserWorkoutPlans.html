@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% block additionalStyleSheets %}
+<link rel="stylesheet" href="{{ url_for('static', filename='styles/createWorkoutPlanStyles/loadUserWorkoutPlansStyle.css') }}">{% endblock %}
+{% block content %}
+<h1>Select Workout You Want To Edit</h1>
+<form method="POST">
+    <select name="workoutPlanSelection" id="workoutPlanSelection">
+        {% for workoutPlan in userWorkoutPlanList %}
+            <option value="{{workoutPlan['id']}}">Name: {{workoutPlan['workoutPlanName']}}   Date Created: {{ workoutPlan['dateCreated'] }}</option>
+        {% endfor %}
+    </select>
+    <input type="submit" class="btn btn-primary btn-lg" value="Next">
+</form>
+{% endblock %}

@@ -1,0 +1,65 @@
+{% extends 'base.html' %}
+{% block additionalStyleSheets %}
+  <link rel="stylesheet" href="{{ url_for('static', filename='styles/loginStyle.css') }}">
+  
+{% endblock %}
+{% block scriptsAtBottom %}
+  <script src="{{ url_for('static', filename='loginScript.js') }}"></script> 
+{% endblock %}
+{% block header %}
+{% endblock %}
+
+{% block content %}
+<section class="banner-section">
+    <div class="bg-layer" style="background-image: url({{url_for('static', filename='images/icons/banner-1.png')}});"></div>
+    <div class="pattern-bg" style="background-image: url({{url_for('static', filename='images/icons/vactor-1.png')}});"></div>
+  {% if not g.user %}
+
+
+  <div id="loginForm">
+  <div class="container" id="container">
+    <div class="form-container sign-up-container">
+      <form method="POST">
+        <h1>Create Account</h1>
+        <input type="text" placeholder="First Name", name="firstname" />
+        <input type="text" placeholder="Last Name" name="lastname" />
+        <input type="email" placeholder="Email", name="email"/>
+        <input type="password" placeholder="Password" name="password"/>
+        <button>Sign Up</button>
+      </form>
+    </div>
+    <div class="form-container sign-in-container">
+      <form method="POST">
+        <h1>Sign in</h1>
+        <input type="username" placeholder="Username" name="username"/>
+        <input type="password" placeholder="Password" name="password"/>
+        <a href="#">Forgot your password?</a>
+        <button>Sign In</button>
+      </form>
+    </div>
+    <div class="overlay-container">
+      <div class="overlay">
+        <div class="overlay-panel overlay-left">
+          <h1>Welcome Back!</h1>
+          <p>To keep connected with us please login with your personal info</p>
+          <button class="ghost" id="signIn">Sign In</button>
+        </div>
+        <div class="overlay-panel overlay-right">
+          <h1>Hello, Friend!</h1>
+          <p>Enter your personal details and start journey with us</p>
+          <button class="ghost" id="signUp">Sign Up</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+  
+
+
+  {% endif %}
+  {% if g.user %}
+ <!-- profile view --> 
+  <a href="{{ url_for('auth.logout') }}">Logout</a>
+  {% endif %}
+  </section>
+{% endblock %}

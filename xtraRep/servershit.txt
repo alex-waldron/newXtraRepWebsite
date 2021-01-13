@@ -1,0 +1,11 @@
+PATH=$PATH:$HOME/bin
+export PATH=$HOME/python/Python-3.8.5/:$PATH
+export PATH=$HOME/python/bin/:$PATH
+export PATH=$HOME/openssl/bin:$PATH
+export LD_LIBRARY_PATH=$HOME/openssl/lib
+export LC_ALL="en_US.UTF-8"
+export LDFLAGS="-L/home4/xtrarepa/openssl/lib -Wl,-rpath,/home4/xtrarepa/opens\
+sl/lib"
+export CPPFLAGS="-I/home4/xtrarepa/openssl/include -I/home4/xtrarepa/openssl/i\
+nclude/openssl"
+export PATH

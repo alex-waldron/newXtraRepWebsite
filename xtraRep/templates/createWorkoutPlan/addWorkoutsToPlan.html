@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+
+{% block additionalStyleSheets %}
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/createWorkoutPlanStyles/addWorkoutsStyle.css') }}">
+    
+{% endblock %}
+{% block header %}
+   
+{% endblock %}
+{% block content %}
+<div class="addWorkoutInput">
+<h2>Add Workouts For: {{ workoutPlanName }}</h2>
+<table>
+    {% for i in range(numOfRows)%}
+        <tr class="row rowForBoxInputs">
+            
+            {% for j in range(i*7 + 1, i*7 + 8) %}
+                
+                {% if programLength >= j %}
+                <td class="col-2 inputBox">
+                    <p>Day {{ j }}</p>
+                    
+                    {% if j in daysCompleted %}
+                    <p style="color:green; font-weight: bold;">Completed</p>
+                    
+                    {% else %}
+                    <p style="color:red; font-weight: bold;">Not Completed</p>
+                    {% endif %}
+                    <br>
+                    <div class="bottomLink">
+                    <a href="{{ url_for('createWorkoutPlan.addWorkout', day = j, workoutPlanId= workoutPlanId)}}">Add Workout</a>
+                    </div>
+                </td>
+                {% endif %}
+            {% endfor %}
+            
+        
+    {% endfor %}
+    </table>
+    </div>
+{% endblock %}

@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h1>Ready to Create Your Own Workout Plan?</h1>
+    <h3>Using the XtraRep app, you can create programs for our community to follow and introduce a new revenue stream for fitness expertise!</h3>
+
+    <a href="{{ url_for('createWorkoutPlan.getStarted') }}">Get Started</a>
+    <hr>
+    <h1>Want To Edit Or Continue An Already Created Plan</h1>
+    <a href="{{ url_for('createWorkoutPlan.loadUserWorkoutPlan') }}">Continue/Edit</a>
+{% endblock %}

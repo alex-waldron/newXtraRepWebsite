@@ -1,0 +1,14 @@
+.getStartedForm{
+
+    background-color: white;
+    border-radius: 10px;
+    color: black;
+    text-align: center;
+    padding: 30px;
+}
+.getStartedForm label{
+    color: black;
+}
+h1{
+    font-weight: bold;
+}

@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+{% block additionalStyleSheets %}
+  <link rel="stylesheet" href="{{ url_for('static', filename='styles/createWorkoutPlanStyles/createWorkoutStyle.css') }}">
+  
+{% endblock %}
+
+{% block content %}
+<div class="workoutInputFields row">
+    <div class="col">
+    <h1>Create Workout</h1>
+    <form method="post" enctype="multipart/form-data">
+        <div class="form-group">
+            <label for="workoutPicture">Picture or Video For Workout Plan</label>
+            <input type="file" class="file form-control-file" name="workoutPicture" accept="image/*, video/*" data-browse-on-zone-click="true">
+        </div>
+        <div class="form-group">
+            <label for ="nameOfWorkout">Name of Workout</label>
+            <input name="nameOfWorkout" id="nameOfWorkout" class="form-control" required>
+        </div>
+        <h2>Select Muscles Worked</h2>
+        <input type="checkbox" name="musclesWorked" id="chest" value="chest" /><label for="chest" class="form-check-label">Chest</label><br />
+        <input type="checkbox" name="musclesWorked" id="back" value="back" /><label for="back" class="form-check-label">Back</label><br />
+        <input type="checkbox" name="musclesWorked" id="tricep" value="tricep" /><label for="tricep" class="form-check-label">Tricep</label><br />
+        <input type="checkbox" name="musclesWorked" id="bicep" value="bicep" /><label for="bicep" class="form-check-label">Bicep</label><br />
+        <input type="checkbox" name="musclesWorked" id="shoulders" value="shoulders" /><label for="shoulders" class="form-check-label">Shoulders</label><br />
+        <input type="checkbox" name="musclesWorked" id="legs" value="legs" /><label for="legs" class="form-check-label">Legs</label><br />
+        <input type="checkbox" name="musclesWorked" id="abs" value="abs" /><label for="abs" class="form-check-label">Abs</label><br />
+        <input type="checkbox" name="musclesWorked" id="cardio" value="cardio" /><label for="cardio" class="form-check-label">Cardio</label><br />
+        <br>
+        <div class="form-group">
+            <label for ="workoutDescription">Workout Description</label>
+            <textarea class="form-control" name="workoutDescription" id="workoutDescription" cols="30"
+                    rows="10"
+                    placeholder="Inform user what they should focus on or anything else they may need to know before beginning this workout."></textarea>
+        </div>
+        <input type="submit" value="Next" class="btn btn-primary">
+    </form>
+    </div>
+    <div class="col">
+        <img class="sideImage" src="{{ url_for('static', filename='workoutPic.jpeg') }}" alt="">
+    </div>
+    
+    </div>
+{% endblock %}

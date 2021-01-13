@@ -1,0 +1,3 @@
+graft xtraRep/static
+graft xtraRep/templates
+global-exclude *.pyc

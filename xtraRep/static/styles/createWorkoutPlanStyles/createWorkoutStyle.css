@@ -1,0 +1,22 @@
+
+
+.workoutInputFields {
+    background-color: white;
+    color: black;
+    padding: 1%;
+    border-radius: 10px;
+    margin:1%;
+}
+h3{
+    color:black;
+}
+h1{
+    font-weight: bold;
+}
+label{
+    color:black;
+}
+img.sideImage{
+    max-width: 100%;
+    height: 100%;
+}

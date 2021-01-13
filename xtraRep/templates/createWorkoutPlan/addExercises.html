@@ -1,0 +1,68 @@
+{% extends 'base.html' %}
+{% block additionalStyleSheets %}
+<link rel="stylesheet" href="{{ url_for('static', filename='styles/createWorkoutPlanStyles/addExercisesStyle.css') }}">
+
+{% endblock %}
+
+{% block header %} {% endblock %}
+
+{% block content %}
+<form method="POST" enctype="multipart/form-data">
+    <h1>Add Exercises</h1>
+    <div id="exerciseInputs">
+        <div class="exercise1" id="exercise1">
+            <label for="picOfExercise1">Picture or Video of Exercise For User Clarity: </label>
+            <input type="file" id="picOfExercise1" name="picOfExercise1" accept="image/*, video/*">
+            <br>
+            <br>
+            <label for="exerciseName1">Exercise Name: </label>
+            <input type="text" id="exerciseName1" name="exerciseName1">
+            <br>
+            <br>
+            <label for="sets1">Sets</label>
+            <select name="sets1" id="sets1">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+            </select>
+            <br>
+            <br>
+            <label for="sameRepsPerSet1">Same Number of Reps For Every Set? </label>
+            <input type="checkbox" id="sameRepsPerSet1" name="sameRepsPerSet1" onclick="loadNumberOfSets" checked>
+            <br>
+            <br>
+            <div id="repsPerSet1">
+                <label for="repsPerSet1">Reps Per Set</label>
+                <input type="number" id="reps1" name="reps1">
+            </div>
+            <br>
+            <label for="notesOnExercise1">Notes On Exercise</label>
+            <textarea id="notesOnExercise1" name="notesOnExercise1"
+                placeholder="Input guidance on the exercise, what you want the user to focus on during the exercise, or anything that you believe would be beneficial for the user to know before beginning the exercise"
+                rows="4" cols="100"></textarea>
+            <br>
+            <hr />
+            <br>
+        </div>
+    </div>
+
+    <a href="#" id="addExercise" class="btn btn-secondary float-sm-left" onclick="addExerciseToForm()">Add Another
+        Exercise</a>
+    <a href="#" id="removeExercise" class="btn btn-secondary float-sm-right" onclick="removeExerciseFromForm()">Remove
+        Exercise</a>
+
+    <br>
+    <br>
+
+    <div class="d-flex justify-content-center">
+        <input type="submit" class="btn btn-primary btn-lg" value="Submit">
+    </div>
+</form>
+{% endblock %}

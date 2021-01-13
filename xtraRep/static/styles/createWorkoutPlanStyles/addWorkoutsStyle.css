@@ -1,0 +1,41 @@
+.rowForBoxInputs{
+    display: block;
+    background-color:#365c8d;
+    
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    border-radius: 5px;
+    white-space: nowrap;
+    overflow:auto;
+}
+.inputBox{
+    display: inline-block;
+    flex :1;
+    text-align: center;
+    background-color: #220e3f;
+    margin:1%;
+    padding:1%;
+    border-radius: 10%;
+    
+    white-space: normal;
+}
+
+.addWorkoutInput{
+    background-color: white;
+    border-radius: 15px;
+    padding: 5%;
+}
+
+h2{
+    color: #220e3f;
+    font-weight: bold;
+}
+table{
+    width:100%;
+}
+.bottomLink{
+    background-color: #365c8d;
+    border-radius: 10px;
+}

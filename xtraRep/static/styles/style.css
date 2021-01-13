@@ -1,0 +1,180 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,800');
+
+html{
+    overflow:auto;
+}
+
+body{
+    color:white;
+    background-image: linear-gradient(#25528d, #220e3f);
+    background-repeat: no-repeat;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    
+    display: flex;
+    
+    align-items: safe center;
+    flex-direction: column;
+    font-family: 'Montserrat', sans-serif;
+    height: 100vh;
+    margin-top: 0;
+    overflow: auto;
+    
+}
+#wrapper{
+    align-content: center;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    flex: 1 0 auto;
+    align-items: safe center;
+    min-height: 100%;
+}
+hr {
+    display: block;
+    height: 3px;
+    border: 0;
+    border-top: 3px solid black;
+    margin: 1em 0;
+    padding: 0;
+}
+footer{
+    width: 100%;
+    vertical-align: middle;
+    flex-shrink:0;
+}
+
+footer img{
+    width:200px;
+}
+
+img.profileImage{
+    display: block;
+    position: fixed;
+    right: 0px;
+    top: 0px;
+    margin: 6%;
+    width: 5%;
+    padding: 2px;
+    border:2px solid white;
+    border-radius: 2.5%;
+    background-color: white;
+}
+ul.menuNav {
+    list-style-type: none;
+    display: block;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+}
+
+.sideNav{
+    display: none;
+}
+
+.sideNav a{
+    color: #220e3f;
+}
+
+#topBar{
+    display: block;
+}
+
+img#sideMenuIcon{
+    display: none;
+}
+
+li.menuNav{
+    display: inline-block;
+    padding: 8px;
+    color: white;
+}
+
+a.menuNav{
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+a.menuNav:hover{
+    color: purple;
+    background-color: white;
+}
+
+img.logo{
+    display: block;
+    width: 20%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 0;
+    margin-bottom: 10px;
+    
+}
+
+
+
+.main{
+    height: 100%;
+    padding-top:30px;
+    padding-bottom: 30px;
+    width:75%;
+    
+}
+
+
+
+@media (max-width: 600px) {
+    #sideNav {
+        display: block;
+        position: fixed;
+        z-index: 1;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 0px;
+        overflow-x: hidden;
+        background-color: white;
+        transition: 0.5s;
+    }
+    .sideNav a{
+        display: block;
+        padding: 10px;
+    }
+    img#sideMenuIcon{
+        display: block;
+        position: fixed;
+        left: 0px;
+        top: 0px;
+        margin: 6%;
+        width: 5%;
+        padding: 5px;
+        border:2px solid white;
+        border-radius: 5px;
+        background-color: white;
+    }
+    ul.menuNav {display: none;}
+  }
+
+
+
+a{
+    text-decoration: none;
+    color: white;
+}
+label{
+    color:white;
+}
+
+
+
+
+
+
+
+
+
+
+
